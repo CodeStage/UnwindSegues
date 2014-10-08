@@ -18,6 +18,7 @@
 		7B7B3F9F199B8F9F008AC6D4 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7B3F9D199B8F9F008AC6D4 /* BViewController.m */; };
 		7B7B3FA2199B8FA8008AC6D4 /* CViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7B3FA1199B8FA8008AC6D4 /* CViewController.m */; };
 		7B7B3FA3199B8FA8008AC6D4 /* CViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7B3FA1199B8FA8008AC6D4 /* CViewController.m */; };
+		7BB55D5F19E529A000CB1365 /* CookieStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB55D5E19E529A000CB1365 /* CookieStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		7B7B3F9D199B8F9F008AC6D4 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		7B7B3FA0199B8FA8008AC6D4 /* CViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CViewController.h; sourceTree = "<group>"; };
 		7B7B3FA1199B8FA8008AC6D4 /* CViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CViewController.m; sourceTree = "<group>"; };
+		7BB55D5D19E529A000CB1365 /* CookieStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookieStore.h; sourceTree = "<group>"; };
+		7BB55D5E19E529A000CB1365 /* CookieStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookieStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				7B7B3F9D199B8F9F008AC6D4 /* BViewController.m */,
 				7B7B3FA0199B8FA8008AC6D4 /* CViewController.h */,
 				7B7B3FA1199B8FA8008AC6D4 /* CViewController.m */,
+				7BB55D5D19E529A000CB1365 /* CookieStore.h */,
+				7BB55D5E19E529A000CB1365 /* CookieStore.m */,
 			);
 			path = UnwindSegues;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7B3F9A199B8F93008AC6D4 /* AViewController.m in Sources */,
+				7BB55D5F19E529A000CB1365 /* CookieStore.m in Sources */,
 				7B7B3FA2199B8FA8008AC6D4 /* CViewController.m in Sources */,
 				7B7B3F7B199B8EF8008AC6D4 /* AppDelegate.m in Sources */,
 				7B7B3F9E199B8F9F008AC6D4 /* BViewController.m in Sources */,

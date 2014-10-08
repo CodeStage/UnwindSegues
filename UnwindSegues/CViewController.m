@@ -9,23 +9,59 @@
 #import "CViewController.h"
 
 
+static NSString *const kAvailableCookiesKeyPath = @"availableCookies";
+
+
 @interface CViewController ()
+
+@property IBOutlet UILabel *availableCookies;
 
 @end
 
 
 @implementation CViewController
 
+@synthesize cookieStore;
 
-- (IBAction)unwindToC:(UIStoryboardSegue *)segue
+
+- (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     
+    [self.cookieStore addObserver:self forKeyPath:kAvailableCookiesKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:nil];
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
     
+    [self.cookieStore removeObserver:self forKeyPath:kAvailableCookiesKeyPath context:nil];
+}
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:kAvailableCookiesKeyPath])
+    {
+        [self updateAvailableCookiesLabel];
+    }
+    else
+    {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+
+- (IBAction)refillCookiesAction:(id)sender
+{
+    [self.cookieStore refillCookies];
+}
+
+
+- (void)updateAvailableCookiesLabel
+{
+    self.availableCookies.text = [NSString stringWithFormat:@"Cookies: %d",  self.cookieStore.availableCookies];
 }
 
 

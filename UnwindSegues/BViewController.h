@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CookieStore.h"
 
-@interface BViewController : UIViewController
+
+@interface BViewController : UIViewController <CookieStoreClient>
 
 @end

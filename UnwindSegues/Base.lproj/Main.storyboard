@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xK9-oV-Vn2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--B-->
@@ -15,7 +16,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzJ-BM-KBb">
+                                <rect key="frame" x="16" y="559" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="zhL-qS-pzA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJX-6d-5hi">
+                                <rect key="frame" x="470" y="555" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="MhS-Ze-9qW"/>
+                                </constraints>
+                                <state key="normal" title="Eat Cookie">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="eatCookieAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Suz-N5-F09"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rJX-6d-5hi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0eC-e1-g7p"/>
+                            <constraint firstAttribute="bottom" secondItem="OzJ-BM-KBb" secondAttribute="bottom" constant="20" symbolic="YES" id="2mF-na-utS"/>
+                            <constraint firstItem="OzJ-BM-KBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Isg-QW-XUi"/>
+                            <constraint firstItem="rJX-6d-5hi" firstAttribute="baseline" secondItem="OzJ-BM-KBb" secondAttribute="baseline" id="sEv-YO-Ugk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="B" id="kEd-p3-Hk8">
                         <barButtonItem key="rightBarButtonItem" title="C" id="Ez7-ln-rel">
@@ -24,6 +54,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="availableCookies" destination="OzJ-BM-KBb" id="YNe-yC-O7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +117,36 @@
                     <view key="view" contentMode="scaleToFill" id="FD9-Jv-0xU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uv5-3U-TLM">
+                                <rect key="frame" x="16" y="559" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="oep-rL-T33"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuf-gz-9HL">
+                                <rect key="frame" x="470" y="550" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="o8S-Sm-dqM"/>
+                                </constraints>
+                                <state key="normal" title="Refill Cookies">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refillCookiesAction:" destination="20f-Ll-ln9" eventType="touchUpInside" id="zwe-x4-OUa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uuf-gz-9HL" firstAttribute="bottom" secondItem="uv5-3U-TLM" secondAttribute="bottom" id="0VU-C6-P16"/>
+                            <constraint firstItem="uv5-3U-TLM" firstAttribute="leading" secondItem="FD9-Jv-0xU" secondAttribute="leadingMargin" id="aDG-5k-sa4"/>
+                            <constraint firstAttribute="bottom" secondItem="uv5-3U-TLM" secondAttribute="bottom" constant="20" symbolic="YES" id="fiy-Hm-9x9"/>
+                            <constraint firstItem="uuf-gz-9HL" firstAttribute="trailing" secondItem="FD9-Jv-0xU" secondAttribute="trailingMargin" id="qhR-kd-pJm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="C" id="frd-0r-DVT">
                         <barButtonItem key="rightBarButtonItem" title="A" id="8Jv-7o-bUn">
@@ -93,6 +155,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="availableCookies" destination="uv5-3U-TLM" id="mb1-yZ-7KC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CHp-bh-XTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QnO-vk-3ee" userLabel="Exit" sceneMemberID="exit"/>
@@ -144,23 +209,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuf-gz-9HL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cookies: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0n-R4-7Vb">
+                                <rect key="frame" x="16" y="559" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gIw-F6-P5P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-eF-mzG">
                                 <rect key="frame" x="243" y="285" width="114" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="114" id="vuK-pj-ghH"/>
+                                    <constraint firstAttribute="width" constant="114" id="KtV-D0-Kmb"/>
                                 </constraints>
                                 <state key="normal" title="X">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CUx-om-Hud" kind="presentation" id="6fp-UI-iW1"/>
+                                    <segue destination="CUx-om-Hud" kind="presentation" id="5iU-SG-e2x"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uuf-gz-9HL" firstAttribute="centerY" secondItem="1n9-EA-t60" secondAttribute="centerY" id="fTz-fr-AZJ"/>
-                            <constraint firstItem="uuf-gz-9HL" firstAttribute="centerX" secondItem="1n9-EA-t60" secondAttribute="centerX" id="nBH-u4-kqr"/>
+                            <constraint firstItem="JDx-eF-mzG" firstAttribute="centerX" secondItem="1n9-EA-t60" secondAttribute="centerX" id="Zwr-FR-ODQ"/>
+                            <constraint firstItem="u0n-R4-7Vb" firstAttribute="leading" secondItem="1n9-EA-t60" secondAttribute="leadingMargin" id="Zy2-Iq-NFC"/>
+                            <constraint firstAttribute="bottom" secondItem="u0n-R4-7Vb" secondAttribute="bottom" constant="20" symbolic="YES" id="afV-4J-dQu"/>
+                            <constraint firstItem="JDx-eF-mzG" firstAttribute="centerY" secondItem="1n9-EA-t60" secondAttribute="centerY" id="d16-fw-5oX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="A" id="ywS-4R-hvb">
@@ -170,6 +246,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="availableCookies" destination="u0n-R4-7Vb" id="gzJ-9x-6MX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b46-9C-Z6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
