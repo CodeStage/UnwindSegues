@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AViewController.h
 //  UnwindSegues
 //
 //  Created by Christian König on 13.08.14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AViewController : UIViewController
 
 @end
-
